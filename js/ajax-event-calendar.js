@@ -187,7 +187,7 @@ function get_money(year, month, period_months){
     },function(json){
         $.each(json, function(i, data){
     */
-    var data = [{"ammount":"-110000","balance":"340000","date":"2015-05-01","editable":true,"item":"口座移動|出","money_id":"345","summary":"生活費"},{"ammount":"-30000","balance":"310000","date":"2015-05-01","editable":true,"item":"実家","money_id":"346","summary":""},{"ammount":"-5000","balance":"305000","date":"2015-05-02","editable":true,"item":"電気料金","money_id":"348","summary":""}]
+    var json = [{"ammount":"-110000","balance":"340000","date":"2015-05-01","editable":true,"item":"口座移動|出","money_id":"345","summary":"生活費"},{"ammount":"-30000","balance":"310000","date":"2015-05-01","editable":true,"item":"実家","money_id":"346","summary":""},{"ammount":"-5000","balance":"305000","date":"2015-05-02","editable":true,"item":"電気料金","money_id":"348","summary":""}]
         $.each(json, function(i, data){
             if (data.date){
                 var ammountclass = '';
