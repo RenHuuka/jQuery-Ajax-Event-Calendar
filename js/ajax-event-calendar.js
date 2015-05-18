@@ -214,7 +214,9 @@ function get_money(year, month, period_months){
                 */
             }
         })
+        /*
     });
+    */
 }
 function separate(num){
     return String(num).replace( /(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
