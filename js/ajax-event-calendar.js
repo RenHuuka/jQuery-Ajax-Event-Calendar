@@ -129,7 +129,7 @@ jQuery(function($) {
         });
     });
 });
-# Create Calendar
+// Create Calendar
 function output_calendar(move, months){
     $('#moneys').empty();
     $('.year').empty();
@@ -178,7 +178,7 @@ function output_calendar(move, months){
     }
     get_money(moment_start_date.year(), moment_start_date.month()+1, period_months);
 }
-# Get Data from json. And insert event to calendar
+// Get Data from json. And insert event to calendar
 function get_money(year, month, period_months){
     $.getJSON("data.json" , function(data) {
         $.each(json, function(i, data){
