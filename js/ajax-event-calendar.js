@@ -111,6 +111,7 @@ jQuery(function($) {
         });
         $('#Delete_Money').modal('hide')
     });
+    // Change item, then get the ammount from json
     $("select#AddSelectItem").change(function () {
         var jsonurl = '/ajax/get_item/' + $(this).val() + '/';
         $.getJSON(jsonurl,function(json){
@@ -128,6 +129,7 @@ jQuery(function($) {
         });
     });
 });
+# Create Calendar
 function output_calendar(move, months){
     $('#moneys').empty();
     $('.year').empty();
@@ -176,6 +178,7 @@ function output_calendar(move, months){
     }
     get_money(moment_start_date.year(), moment_start_date.month()+1, period_months);
 }
+# Get Data from json. And insert event to calendar
 function get_money(year, month, period_months){
     var get_money_url = '/ajax/get_moneys/' + 1 + '/' + year + '/' + month + '/1/' + period_months + '/';
     $.getJSON(get_money_url, {
