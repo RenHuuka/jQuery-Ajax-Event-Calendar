@@ -180,7 +180,7 @@ function output_calendar(move, months){
 }
 // Get Data from json. And insert event to calendar
 function get_money(year, month, period_months){
-    $.getJSON("data.json" , function(data) {
+    $.getJSON("../data.json" , function(data) {
         $.each(json, function(i, data){
             if (data.date){
                 var ammountclass = '';
