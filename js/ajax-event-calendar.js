@@ -180,7 +180,14 @@ function output_calendar(move, months){
 }
 // Get Data from json. And insert event to calendar
 function get_money(year, month, period_months){
-    $.getJSON("../data.json" , function(data) {
+    /*
+    var get_money_url = '/ajax/get_moneys/' + 1 + '/' + year + '/' + month + '/1/' + period_months + '/';
+    $.getJSON(get_money_url, {
+        start:$.now()
+    },function(json){
+        $.each(json, function(i, data){
+    */
+    var data = [{"ammount":"-110000","balance":"340000","date":"2015-05-01","editable":true,"item":"口座移動|出","money_id":"345","summary":"生活費"},{"ammount":"-30000","balance":"310000","date":"2015-05-01","editable":true,"item":"実家","money_id":"346","summary":""},{"ammount":"-5000","balance":"305000","date":"2015-05-02","editable":true,"item":"電気料金","money_id":"348","summary":""}]
         $.each(json, function(i, data){
             if (data.date){
                 var ammountclass = '';
