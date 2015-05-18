@@ -74,11 +74,10 @@
                         <label for="AddSelectItem" class="col-sm-4 control-label"><i class="fa fa-asterisk"></i> 項目</label>
                         <div class="col-sm-8">
                             <select class="form-control" id="AddSelectItem" name="item_id">
-                                <option value="29">市民税</option>
-                                <option value="31">車検</option>
-                                <option value="32">自動車税</option>
-                                <option value="33">国民年金</option>
-                                <option value="35">自動車保険</option>
+                                <option value="1">食費</option>
+                                <option value="2">生活費</option>
+                                <option value="3">家賃</option>
+                                <option value="4">収入</option>
                             </select>
                         </div>
                     </div>
@@ -113,7 +112,6 @@
             </div>
             <div class="modal-body">
                 <form id="Update_Money_Form" action="/money/1/?action=update_money" method="post" accept-charset="utf-8" class="form-horizontal" role="form">
-                    <input type='hidden' name='csrfmiddlewaretoken' value='NCCNsJG909YJ4vCN9OWdROPsVYBrU5it' />
                     <input type="hidden" name="money_id" id="EditMoneyID" value="" required />
                     <div class="form-group">
                         <label for="InputDate" class="col-sm-4 control-label"><i class="fa fa-asterisk"></i> 日時</label>
@@ -125,11 +123,10 @@
                         <label for="SelectItem" class="col-sm-4 control-label"><i class="fa fa-asterisk"></i> 項目</label>
                         <div class="col-sm-8">
                             <select class="form-control" id="SelectItem" name="item_id">
-                                <option value="29">市民税</option>
-                                <option value="31">車検</option>
-                                <option value="32">自動車税</option>
-                                <option value="33">国民年金</option>
-                                <option value="35">自動車保険</option>
+                                <option value="1">食費</option>
+                                <option value="2">生活費</option>
+                                <option value="3">家賃</option>
+                                <option value="4">収入</option>
                             </select>
                         </div>
                     </div>
@@ -149,7 +146,6 @@
                     <button id="Update_Money_Submit" type="submit" class="btn btn-primary">入出金を編集</button>
                 <hr />
                 <form id="Delete_Money_Form" action="/money/1/?action=delete_money" method="post" accept-charset="utf-8" class="form-horizontal" role="form">
-                    <input type='hidden' name='csrfmiddlewaretoken' value='NCCNsJG909YJ4vCN9OWdROPsVYBrU5it' />
                     <input type="hidden" name="money_id" id="DeleteMoneyID" value="" required />
                 </form>
                     <button id="Delete_Money_Submit" type="submit" class="btn btn-danger">入出金を削除</button>
