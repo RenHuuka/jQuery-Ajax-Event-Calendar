@@ -32,8 +32,9 @@ jQuery(function($) {
     });
     // Add Money Data
     $("#Add_Money_Submit").click(function(){
+        var event_id = 1;
         $.ajax({
-            url: "/money/1/?action=ajax_add_money",
+            url: "/money/" + event_id + "/?action=ajax_add_money",
             type: "POST",
             data: $("form#Add_Money_Form").serialize(),
             success: function(json){
@@ -59,8 +60,9 @@ jQuery(function($) {
     });
     // Update Money Data
     $("#Update_Money_Submit").click(function(){
+        var event_id = 1;
         $.ajax({
-            url: "/money/1/?action=ajax_update_money",
+            url: "/money/" + event_id + "/?action=ajax_update_money",
             type: "POST",
             data: $("form#Update_Money_Form").serialize(),
             success: function(json){
@@ -86,8 +88,9 @@ jQuery(function($) {
     });
     // Delete Money Data
     $("#Delete_Money_Submit").click(function(){
+        var event_id = 1;
         $.ajax({
-            url: "/money/1/?action=ajax_delete_money",
+            url: "/money/" + event_id + "/?action=ajax_delete_money",
             type: "POST",
             data: $("form#Delete_Money_Form").serialize(),
             success: function(json){
