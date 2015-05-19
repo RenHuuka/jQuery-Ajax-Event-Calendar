@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>jQuery-Ajax-Event-Calendar</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://raw.githubusercontent.com/RenHuuka/jQuery-Ajax-Event-Calendar/master/css/style.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="http://momentjs.com/downloads/moment-with-locales.min.js"></script>
@@ -61,7 +61,6 @@
             </div>
             <div class="modal-body">
                 <form id="Add_Money_Form" action="/money/1/?action=add_money" method="post" accept-charset="utf-8" class="form-horizontal" role="form">
-                    <input type='hidden' name='csrfmiddlewaretoken' value='NCCNsJG909YJ4vCN9OWdROPsVYBrU5it' />
                     <div class="form-group">
                         <label for="AddInputDate" class="col-sm-4 control-label"><i class="fa fa-asterisk"></i> 日時</label>
                         <div class="col-sm-8">
@@ -112,7 +111,6 @@
             </div>
             <div class="modal-body">
                 <form id="Update_Money_Form" action="/money/1/?action=update_money" method="post" accept-charset="utf-8" class="form-horizontal" role="form">
-                    <input type='hidden' name='csrfmiddlewaretoken' value='NCCNsJG909YJ4vCN9OWdROPsVYBrU5it' />
                     <input type="hidden" name="money_id" id="EditMoneyID" value="" required />
                     <div class="form-group">
                         <label for="InputDate" class="col-sm-4 control-label"><i class="fa fa-asterisk"></i> 日時</label>
@@ -149,7 +147,6 @@
                     <button id="Update_Money_Submit" type="submit" class="btn btn-primary">入出金を編集</button>
                 <hr />
                 <form id="Delete_Money_Form" action="/money/1/?action=delete_money" method="post" accept-charset="utf-8" class="form-horizontal" role="form">
-                    <input type='hidden' name='csrfmiddlewaretoken' value='NCCNsJG909YJ4vCN9OWdROPsVYBrU5it' />
                     <input type="hidden" name="money_id" id="DeleteMoneyID" value="" required />
                 </form>
                     <button id="Delete_Money_Submit" type="submit" class="btn btn-danger">入出金を削除</button>
