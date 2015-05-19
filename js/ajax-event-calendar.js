@@ -2,7 +2,7 @@ jQuery(function($) {
     var move = null;
     var months = 12;
     output_calendar(move, months);
-    // 横移動
+    // Move Months
     $('#move_controls button').click(function () {
         var months = 12;
         months = $('#period_controls button.active').data('months');
@@ -18,7 +18,7 @@ jQuery(function($) {
         $(this).addClass('active');
         output_calendar(move, months);
     });
-    // 表示期間
+    // View Period
     $('#period_controls button').click(function () {
         var move = null;
         var months = 12;
@@ -114,6 +114,7 @@ jQuery(function($) {
         });
         $('#Delete_Money').modal('hide')
     });
+    // Get Item Data
     $("select#AddSelectItem").change(function () {
         var jsonurl = '/ajax/get_item/' + $(this).val() + '/';
         $.getJSON(jsonurl,function(json){
@@ -122,6 +123,7 @@ jQuery(function($) {
             }
         });
     });
+    // Get Item Data
     $("select#SelectItem").change(function () {
         var jsonurl = '/ajax/get_item/' + $(this).val() + '/';
         $.getJSON(jsonurl,function(json){
@@ -131,6 +133,7 @@ jQuery(function($) {
         });
     });
 });
+// Create Calendar Table
 function output_calendar(move, months){
     $('#moneys').empty();
     $('.year').empty();
@@ -179,6 +182,7 @@ function output_calendar(move, months){
     }
     get_money(moment_start_date.year(), moment_start_date.month()+1, period_months);
 }
+// Get Item Datas
 function get_money(year, month, period_months){
     var get_money_url = '/ajax/get_moneys/' + 1 + '/' + year + '/' + month + '/1/' + period_months + '/';
     $.getJSON(get_money_url, {
@@ -205,16 +209,15 @@ function get_money(year, month, period_months){
                 $('.cell_' + data.date).append('<table class="table table-bordered table-condensed table-hover cell_child_' + data.date + '"></table>');
                 }
                 $('.cell_child_' + data.date).append('<tr class="money_' + data.money_id + '" data-toggle="modal" data-target="#Update_Money" data-momey_id="' + data.money_id + '"><td><strong class="' + ammountclass + '">' + ammount + '</strong></td><td><span>' + data.item + summarybr + data.summary + '</span></td><td><strong class="' + balanceclass + '">' + balance + '</strong></td></tr>');
-                /*
-                $('.cell_' + data.date).append('<p class="row money_' + data.money_id + '" data-toggle="modal" data-target="#Update_Money" data-momey_id="' + data.money_id + '"><span class="col-sm-4' + ammountclass + '">' + data.ammount + summarybr + data.summary + '</span><span class="col-sm-4">' + data.item + '</span><span class="col-sm-4' + balanceclass + '">' + data.balance + '</span></p>');
-                */
             }
         })
     });
 }
+// Add commma
 function separate(num){
     return String(num).replace( /(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
 }
+// Get Item Data
 jQuery(function($) {
     $('#Add_Money').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget)
